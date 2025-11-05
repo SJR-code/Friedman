@@ -1,0 +1,20 @@
+Package: DVT
+Type: Package
+Title: Data Visualization Templates
+Version: 0.0.0.9000
+Authors@R: c(
+    person(
+      "Rhianna", "Stephens",
+      email = "RS32@usf.edu",
+      role = c("aut", "cre")
+    )
+  )
+Description: The goal of the package is to create publication-ready templates for data visualization. 
+Depends: R(>= 3.1.2)
+Imports: 
+License: GPL
+Encoding: UTF-8
+LazyData: true
+URL: https://github.com/SJR-code/Friedman
+BugReports: https://github.com/SJR-code/Friedman/issues
+Suggests: ggplot2
