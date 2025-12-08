@@ -1,0 +1,116 @@
+* using log directory 'C:/Users/rhian/Documents/USF/Fall TTF Curriculm/R Programming/DVT.Rcheck'
+* using R version 4.5.2 (2025-10-31 ucrt)
+* using platform: x86_64-w64-mingw32
+* R was compiled by
+    gcc.exe (GCC) 14.3.0
+    GNU Fortran (GCC) 14.3.0
+* running under: Windows 11 x64 (build 26200)
+* using session charset: UTF-8
+* using options '--no-manual --as-cran'
+* checking for file 'DVT/DESCRIPTION' ... OK
+* checking extension type ... Package
+* this is package 'DVT' version '0.0.0.9000'
+* package encoding: UTF-8
+* checking package namespace information ... OK
+* checking package dependencies ... OK
+* checking if this is a source package ... OK
+* checking if there is a namespace ... OK
+* checking for executable files ... OK
+* checking for hidden files and directories ... OK
+* checking for portable file names ... OK
+* checking serialization versions ... OK
+* checking whether package 'DVT' can be installed ... OK
+* checking installed package size ... OK
+* checking package directory ... OK
+* checking for future file timestamps ... OK
+* checking DESCRIPTION meta-information ... OK
+* checking top-level files ... NOTE
+Non-standard file/directory found at top level:
+  'Final.Rmd'
+* checking for left-over files ... OK
+* checking index information ... OK
+* checking package subdirectories ... OK
+* checking code files for non-ASCII characters ... OK
+* checking R files for syntax errors ... OK
+* checking whether the package can be loaded ... OK
+* checking whether the package can be loaded with stated dependencies ... OK
+* checking whether the package can be unloaded cleanly ... OK
+* checking whether the namespace can be loaded with stated dependencies ... OK
+* checking whether the namespace can be unloaded cleanly ... OK
+* checking loading without being on the library search path ... OK
+* checking dependencies in R code ... NOTE
+Namespaces in Imports field not imported from:
+  'ggplot2' 'ggthemes'
+  All declared Imports should be used.
+* checking S3 generic/method consistency ... OK
+* checking replacement functions ... OK
+* checking foreign function calls ... OK
+* checking R code for possible problems ... NOTE
+scatter_plot_theme: no visible global function definition for
+  '%+replace%'
+scatter_plot_theme: no visible global function definition for
+  'theme_tufte'
+scatter_plot_theme: no visible global function definition for 'theme'
+scatter_plot_theme: no visible global function definition for
+  'element_line'
+scatter_plot_theme: no visible global function definition for
+  'element_blank'
+scatter_plot_theme: no visible global function definition for
+  'element_rect'
+scatter_plot_theme: no visible global function definition for
+  'element_text'
+scatter_plot_theme: no visible global function definition for 'rel'
+scatter_plot_theme: no visible global function definition for 'margin'
+time_series_theme: no visible global function definition for
+  'theme_minimal'
+time_series_theme: no visible global function definition for
+  '%+replace%'
+time_series_theme: no visible global function definition for 'theme'
+time_series_theme: no visible global function definition for
+  'element_text'
+time_series_theme: no visible global function definition for 'rel'
+time_series_theme: no visible global function definition for
+  'element_line'
+time_series_theme: no visible global function definition for
+  'element_blank'
+time_series_theme: no visible global function definition for
+  'element_rect'
+time_series_theme: no visible global function definition for 'unit'
+Undefined global functions or variables:
+  %+replace% element_blank element_line element_rect element_text
+  margin rel theme theme_minimal theme_tufte unit
+* checking Rd files ... OK
+* checking Rd metadata ... OK
+* checking Rd line widths ... OK
+* checking Rd cross-references ... OK
+* checking for missing documentation entries ... WARNING
+Undocumented code objects:
+  'scatter_plot_theme' 'time_series_theme'
+All user-level objects in a package should have documentation entries.
+See chapter 'Writing R documentation files' in the 'Writing R
+Extensions' manual.
+* checking for code/documentation mismatches ... WARNING
+Functions or methods with usage in Rd file 'hello.Rd' but not in code:
+  'hello'
+
+* checking Rd \usage sections ... OK
+* checking Rd contents ... OK
+* checking for unstated dependencies in examples ... OK
+* checking examples ... ERROR
+Running examples in 'DVT-Ex.R' failed
+The error most likely occurred in:
+
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: hello
+> ### Title: Hello, World!
+> ### Aliases: hello
+> 
+> ### ** Examples
+> 
+> hello()
+Error in hello() : could not find function "hello"
+Execution halted
+* checking for non-standard things in the check directory ... OK
+* checking for detritus in the temp directory ... OK
+* DONE
+Status: 1 ERROR, 2 WARNINGs, 3 NOTEs
