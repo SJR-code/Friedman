@@ -11,10 +11,11 @@ Authors@R: c(
   )
 Description: The goal of the package is to create publication-ready templates for data visualization. 
 Depends: R(>= 3.1.2)
-Imports: 
+Imports: ggplot2, ggthemes
 License: GPL
 Encoding: UTF-8
 LazyData: true
 URL: https://github.com/SJR-code/Friedman
 BugReports: https://github.com/SJR-code/Friedman/issues
-Suggests: ggplot2
+Suggests: 
+RoxygenNote: 7.3.3

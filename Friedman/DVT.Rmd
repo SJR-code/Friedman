@@ -1,0 +1,92 @@
+---
+title: "Data Visualization Themes"
+author: "Rhianna Stephens"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(ggplot2)
+library(ggthemes)
+library(devtools)
+library(roxygen2)
+library(usethis)
+library(testthat)
+```
+
+## Scatterplot theme and example plot using ggplot2
+
+```{r, "Scatter plot"}
+# Define a custom theme function
+scatter_plot_theme <- function(base_size = 12, base_family = "serif") {
+  theme_tufte(base_size = base_size, base_family = base_family) %+replace%
+    theme(
+      # Panel and grid elements
+      panel.grid.major = element_line(color = "gray20", linetype = "dotted"),
+      panel.grid.minor = element_blank(),
+      panel.background = element_rect(fill = "grey95", color = NA),
+
+      # Axis elements
+      axis.line = element_line(color = "gray50"),
+      axis.ticks = element_line(color = "gray50"),
+      axis.text = element_text(color = "gray30"),
+      axis.title = element_text(color = "gray20", face = "bold.italic"),
+
+      # Plot title and subtitle
+      plot.title = element_text(size = rel(1.4), face = "bold", hjust = 0.5, margin = margin(b = 10)),
+      plot.subtitle = element_text(size = rel(1.1), face = "italic", hjust = 0.5, margin = margin(b = 5)),
+      plot.caption = element_text(size = rel(0.8), color = "gray50", hjust = 1),
+      plot.background = element_rect(fill = "grey95", colour = NA),
+
+      # Legend elements
+      legend.position = "right",
+      legend.title = element_text(face = "bold.italic"),
+      legend.text = element_text(),
+      legend.key = element_rect(fill = "gray95", color = NA)
+    )
+}
+
+####
+
+# Example usage for scatterplot theme
+scatterplot <- mtcars
+
+ggplot(scatterplot, aes(x = mpg, y = hp)) +
+  geom_point(aes(colour = factor(cyl))) +
+  labs(
+    title = "Horsepower vs. MPG by Cylinder Count",
+    subtitle = "Analysis of mtcars dataset",
+    x = "Miles Per Gallon",
+    y = "Horsepower",
+  ) +
+  scatter_plot_theme() + # Apply the custom theme
+  scale_color_brewer("Cylinder") # Add a color palette
+
+
+```
+
+## Timeseries theme and example plot using base R
+
+```{r, time series theme}
+
+
+timeseries <- function() {
+      par(mar = c(5, 5, 4, 2) + 0.1,  # Adjust margins
+          cex.main = 1.2,            # Main title size
+          cex.lab = 1.1,             # Axis label size
+          cex.axis = 0.9,            # Axis tick label size
+          font.lab = 2,              # Bold axis labels
+          col.lab = "gray20",        # Dark gray axis labels
+          col.axis = "gray50",       # Light gray axis tick labels
+          bty = "l",                 # L-shaped box around plot
+          lty = 2,
+          lwd = 1.5,                 # Line width for axes and box
+          bg = "gray95")
+}
+
+timeseries()
+
+# Example plot for timeseries theme usage
+
+plot(austres, main = "Austres Time Series", xlab = "Year", ylab = "Resident Population")
+```
